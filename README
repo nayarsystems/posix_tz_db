@@ -1,0 +1,3 @@
+Generates POSIX timezones strings reading data from /usr/share/zoneinfo.
+
+Can output CSV or JSON.
