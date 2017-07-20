@@ -154,6 +154,7 @@ ZONES = [
     "America/Moncton",
     "America/Monterrey",
     "America/Montevideo",
+    "America/Montreal",
     "America/Montserrat",
     "America/Nassau",
     "America/New_York",

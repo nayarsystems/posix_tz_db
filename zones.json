@@ -149,6 +149,7 @@
 "America/Moncton":"AST4ADT,M3.2.0,M11.1.0",
 "America/Monterrey":"CST6CDT,M4.1.0,M10.5.0",
 "America/Montevideo":"<-03>3",
+"America/Montreal":"EST5EDT,M3.2.0,M11.1.0",
 "America/Montserrat":"AST4",
 "America/Nassau":"EST5EDT,M3.2.0,M11.1.0",
 "America/New_York":"EST5EDT,M3.2.0,M11.1.0",
