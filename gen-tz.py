@@ -443,7 +443,7 @@ def make_timezones_dict():
     result = {}
     for timezone in ZONES:
         timezone = timezone.strip()
-        result[timezone] = get_tz_string(timezone.strip())
+        result[timezone] = get_tz_string(timezone)
     return result
 
 
