@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
+import sys
 import argparse
+import json
 
 ZONES_DIR = "/usr/share/zoneinfo/"
 ZONES = [
@@ -476,7 +478,7 @@ def make_timezones_dict():
     result = {}
     for timezone in ZONES:
         timezone = timezone.strip()
-        result[timezone] = get_tz_string(timezone.strip())
+        result[timezone] = get_tz_string(timezone)
     return result
 
 
@@ -486,10 +488,7 @@ def print_csv(timezones_dict):
 
 
 def print_json(timezones_dict):
-    print("{")
-    lines = ['"{}":"{}"'.format(name, tz) for name, tz in timezones_dict.items()]
-    print(",\n".join(lines))
-    print("}")
+    json.dump(timezones_dict, sys.stdout, indent=0, sort_keys=True, separators=(",", ":"))
 
 
 if __name__ == "__main__":
