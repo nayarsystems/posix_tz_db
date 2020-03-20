@@ -493,8 +493,9 @@ def print_json(timezones_dict):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generates POSIX timezones strings reading data from " + ZONES_DIR)
-    parser.add_argument("-j", "--json", action="store_true", help="outputs JSON")
-    parser.add_argument("-c", "--csv", action="store_true", help="outputs CSV")
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument("-j", "--json", action="store_true", help="outputs JSON")
+    group.add_argument("-c", "--csv", action="store_true", help="outputs CSV")
     data = parser.parse_args()
 
     timezones = make_timezones_dict()
