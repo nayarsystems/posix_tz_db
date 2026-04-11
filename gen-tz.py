@@ -31,6 +31,7 @@ def print_csv(timezones_dict):
 def print_json(timezones_dict):
     json.dump(timezones_dict, sys.stdout, indent=0, sort_keys=True, separators=(",", ":"))
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generates POSIX timezones strings reading data from " + ZONES_DIR)
     group = parser.add_mutually_exclusive_group(required=True)
